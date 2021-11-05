@@ -1,5 +1,6 @@
 package com.educandoweb.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import org.aspectj.weaver.ast.Or;
 
@@ -24,6 +25,7 @@ public class User implements Serializable {
     private String password;
 
     @Getter
+    @JsonIgnore
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
