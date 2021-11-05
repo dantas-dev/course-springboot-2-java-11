@@ -20,6 +20,9 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+    public User() {
+    }
+
     public User(Integer id, String name, String email, String phone, String password) {
         this.id = id;
         this.name = name;
